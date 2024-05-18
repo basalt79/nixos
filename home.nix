@@ -2,7 +2,7 @@
 
 {
   imports = [
-#    ./apps/gtk.nix
+    ./apps/gtk.nix
     ./apps/shell.nix
     ./apps/git.nix
     ./apps/vscode.nix
@@ -12,14 +12,6 @@
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "basalt";
   home.homeDirectory = "/home/basalt";
-
-
-  
-  dconf = {
-    enable = true;
-    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
-  };
-
 
 
   # This value determines the Home Manager release that your configuration is
@@ -35,8 +27,6 @@
   # environment.
   home.packages = [
 
-
-    pkgs.gnomeExtensions.desktop-icons-ng-ding
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -93,4 +83,8 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+
+  
+
 }

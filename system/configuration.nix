@@ -88,8 +88,11 @@
 
   };
 
+  services.gnome.gnome-browser-connector.enable = true;
+
   environment.systemPackages = with pkgs; [
     gnome.gnome-tweaks
+    gnomeExtensions.dash-to-dock
     tree
     nixpkgs-fmt
   ];
